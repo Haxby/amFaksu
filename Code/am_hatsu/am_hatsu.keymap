@@ -1,0 +1,64 @@
+/*
+ * Copyright (c) 2020 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/ext_power.h>
+
+
+#define DEFAULT 0
+#define NUMBER 1
+#define SETTING 2
+
+
+
+
+/ {
+
+  
+
+    
+
+
+    keymap {
+       compatible = "zmk,keymap";
+       default_layer {
+            label = "DEFAULT";
+            bindings = <
+&kp ESC     &kp Q   &kp W       &kp E       &kp R   &kp T               &kp Y   &kp U   &kp I       &kp O       &kp P       &kp LBKT
+&kp CAPS    &kp A   &kp S        &kp D       &kp F   &kp G               &kp H   &kp J   &kp K       &kp L       &kp SEMI    &kp SQT
+&mo 1       &kp Z   &kp X       &kp C       &kp V   &kp B               &kp N   &kp M   &kp COMMA   &kp DOT     &kp FSLH    &mo 2
+&kp TAB         &tog 1      &kp LSHIFT  &kp SPACE                       &kp ENTER  &kp BSPC    &kp RBKT    &kp BSLH       
+&kp LG(LS(N4))  &kp LALT    &kp LCTRL   &kp DEL                        &kp RGUI  &kp RCTRL   &kp RALT   &kp AMPS    
+            >;
+        };
+
+        number_layer {
+            label = "NUMBER";
+            bindings = <
+&kp F1      &kp C_BRI_DN    &kp C_BRI_UP    &kp F4      &kp F5      &kp F6                          &kp C_PREV  &kp C_PP    &kp C_NEXT  &kp K_MUTE  &kp C_VOL_DN    &kp C_VOL_UP
+&kp N1      &kp N2          &kp N3          &kp N4      &kp N5      &kp N6                          &kp N7      &kp N8      &kp N9      &kp N0      &kp MINUS       &kp EQUAL
+&mo 1       &kp GRAVE       &none            &kp LA(L) &kp PRCNT   &kp CARET                       &kp STAR    &kp LPAR    &kp RPAR    &kp UP      &kp RIGHT       &mo 2 
+&kp TAB         &tog 1      &kp LSHIFT  &kp SPACE                       &kp ENTER &kp BSPC  &kp LEFT    &kp DOWN
+&kp LG(LS(N4))  &kp LALT    &kp LCTRL   &kp DEL                        &kp RGUI  &kp RCTRL   &kp RALT   &kp AMPS    	
+            >;
+        };
+
+        setting_layer {
+            label = "SETTING";
+            bindings = <
+&ext_power EP_ON    &ext_power EP_OFF   &none   &none   &none   &none               &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &bt BT_CLR
+&none       &none   &none   &none   &none   &none                                   &none           &none           &none   &none   &out OUT_BLE    &out OUT_USB
+&none       &none   &none   &none   &none   &none                                   &sys_reset      &bootloader     &none   &none   &out OUT_TOG           &mo 2
+&none       &none  &none   &none                                                   &none           &none           &none   &none
+&none       &none   &none   &none                                                   &none           &none           &none   &none
+          >;
+         };
+    };
+};
+
