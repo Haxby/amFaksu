@@ -3,7 +3,7 @@
 ## Introduction
 
 **amFaksu** is a custom mechanical keyboard designed for enthusiasts who appreciate a compact and efficient layout. This **split keyboard** offers an ergonomic typing experience by separating the halves, reducing strain, and enhancing comfort. It features **hot-swappable switches** and a **sturdy case**, making it an excellent choice for both beginners and experienced keyboard builders.
-![amFaksu Keyboard](pictures/amis.png)
+![amFaksu Keyboard](Pictures/amis.png)
 
 ## Features
 - **Compact and ergonomic split layout**
